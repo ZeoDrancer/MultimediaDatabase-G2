@@ -1,8 +1,27 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../Assets/img/project-img1.png";
-import projImg2 from "../Assets/img/project-img2.png";
-import projImg3 from "../Assets/img/project-img3.png";
+//import from movies
+import movieforest from "../Assets/img/movies/forestgump.jpg"
+import movieHarry from "../Assets/img/movies/HarryPotter.jpg"
+import moviesaw from "../Assets/img/movies/sawsage.jpeg"
+import movienigthmare from "../Assets/img/movies/nithmare.png"
+import moviepursuit from "../Assets/img/movies/pursuithappyness.jpg"
+import moviesherk from "../Assets/img/movies/Sherk.jpg"
+//import from music
+import musicbruno from "../Assets/img/music/brunomars.jpg";
+import musicedsheran from "../Assets/img/music/edsheeran.jpg";
+import musicqueen from "../Assets/img/music/queen.jpg";
+import musicscorpion from "../Assets/img/music/Scorpion.jpg";
+import musicimaginedragon from "../Assets/img/music/imaginedragons.jpg";
+import musicfugges from "../Assets/img/music/fugges.jpg";
+//import from series
+import seriethebigbangteory from "../Assets/img/series/thebigbang.jpg";
+import seriethesimpsons from "../Assets/img/series/thesimpsons.jpg";
+import serieswat from "../Assets/img/series/swat.jpg";
+import serieamerican from "../Assets/img/series/american.jpg";
+import seriegenius from "../Assets/img/series/Genius.jpg";
+import serieanatomy from "../Assets/img/series/anatomy.jpeg";
+
 import colorSharp2 from "../Assets/img/color-sharp2.png";
 
 import 'animate.css';
@@ -10,36 +29,121 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const projects = [
+  const Movies = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Saw",
+      genero: "Terror ",
+      artist:"Director: James Wan",
+      imgUrl: moviesaw,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Harry potter",
+      genero: "Fantasy",
+      artist:"Director: Chris Columbus and Alfonso Cuarón ",
+      imgUrl: movieHarry,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Shrek",
+      genero: "Animated",
+      artist:"Director: Andrew Adamson and Vicky Jenson",
+      imgUrl: moviesherk,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Forrest Gump",
+      genero: "Romance and drama",
+      artist:"Director: Robert Zemeckis",
+      imgUrl: movieforest,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "The Pursuit of Happyness",
+      genero: "Drama",
+      artist:"Director: 	Gabriele Muccino",
+      imgUrl: moviepursuit,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "The Nightmare Before Christmas",
+      genero: "Animated",
+      artist:"Director: Tim Burton",
+      imgUrl: movienigthmare,
+    },
+   
+  ];
+
+  const Music = [
+    {
+      title: "24K Magic",
+      genero: "Pop, R&B",
+      artist:"Bruno Mars",
+      imgUrl: musicbruno,
+    },
+    {
+      title: "(Equals)",
+      genero: "Pop, R&B, New Wave.",
+      artist:"Ed Sheeran",
+      imgUrl: musicedsheran,
+    },
+    {
+      title: "At night of the opera ",
+      genero: "Hard rock, ópera rock",
+      artist:"Queen",
+      imgUrl: musicqueen,
+    },
+    {
+      title: "Scorpion",
+      genero: "Hip Hop, Trap, Pop-rap",
+      artist:"Drake ",
+      imgUrl: musicscorpion,
+    },
+    {
+      title: "The score",
+      genero: "Rap alternativo, Hip Hop ",
+      artist:"Fugges",
+      imgUrl: musicfugges,
+    },
+    {
+      title: "Origins",
+      genero: "Pop Rock",
+      artist:"Imagine Dragons",
+      imgUrl: musicimaginedragon,
+    },
+  ];
+
+  const Series = [
+    {
+      title: "Grey's Anatomy ",
+      genero: "Dramatic",
+      artist:" Created: Shonda Rhimes",
+      imgUrl: serieanatomy,
+    },
+    {
+      title: "American Horror stories ",
+      genero: "Horror",
+      artist:" Created: Ryan Murphy",
+      imgUrl: serieamerican,
+    },
+    {
+      title: "Genius",
+      genero: "Bibliography",
+      artist:" Created: Noah Pink and Ken Biller",
+      imgUrl: seriegenius,
+    },
+    {
+      title: "The big Bang Theory",
+      genero: "Comedy",
+      artist:" Created: Steven Molaro and Mike Collier ",
+      imgUrl: seriethebigbangteory,
+    },
+    {
+      title: "S.W.A.T ",
+      genero: "Action",
+      artist:" Created: Aaron Rahsaan",
+      imgUrl: serieswat,
+    },
+    {
+      title: "Los Simpsons",
+      genero: "Animated",
+      artist:" Created: Matt Groening",
+      imgUrl: seriethesimpsons,
     },
   ];
 
@@ -51,25 +155,26 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>The most Heard</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2 className="front-weight-bold" >Recommendations</h2>
+                <h2 className="front-weight-bold" >from the most watched</h2>
+                <p className="front-weight-bold">In this panel you can observe our personal recommendations, so that you can nurture your skills is a second language like English</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first" className="front-weight-bold" >Movies</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second" className="front-weight-bold" >Music</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third" className="front-weight-bold" >Series</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          Movies.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -80,11 +185,33 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                            Music.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <Row>
+                        {
+                          Series.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

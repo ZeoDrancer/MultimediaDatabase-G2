@@ -2,8 +2,6 @@ import "../App.css";
 import { NavBar } from "../components/NavBar";
 import Comprovant from "../components/Comprovant";
 
-
-
 function Access() {
   return (
     <div className="Access">

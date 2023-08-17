@@ -3,11 +3,13 @@ import Button from 'react-bootstrap/esm/Button';
 import { useState } from 'react';
 import "../App.css";
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from './supabase/supabase';
 
 
-function Comprovant() {
+const ComprovantLogin = () => {
+
+  let navigate = useNavigate();
 
   const [formData, setformData] = useState({
     email:'', password:'',
@@ -27,15 +29,16 @@ function Comprovant() {
   {
     e.preventDefault();
     try {
-      const { data, error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email:formData.email,
         password: formData.password,
       })
+
       if (error) throw error
-      console.log(data);
-      alert("Check your email")
+        console.log(data);
+        navigate('/Host')
     } 
-    catch (error) {
+    catch (error){
       alert(error)
     }
     
@@ -57,13 +60,13 @@ function Comprovant() {
             variant="primary justify-content-center  alin-items-center"
             type='submit'
         >
-          Click to signUp
+          Click to Login
         </Button>
-        <h6 style={{ paddingTop: '25px', paddingBottom: '0PX'}}> Already have account? </h6>
-        <Link to ='/Login'> Login </Link>
+        <h6 style={{ paddingTop: '25px', paddingBottom: '0PX'}}> Don't have account? </h6>
+        <Link to ='/Access'> Sign Up </Link>
         </Form>
     </div>
   )
 }
 
-export default Comprovant;
+export default ComprovantLogin;
