@@ -1,45 +1,52 @@
 import "../../App.css";
 import { NavBar } from '../../components/NavBar';
-import { useState, useEffect } from 'react';
+import {useState, useEffect } from "react";
 import { supabase } from "../../components/supabase/supabase";
+import { AllPagesCard } from "../../components/AllPagesCard";
 
 
 function All() {
-  
-    const [categories, setCategories] = useState(null);
-    const [fetchError, setFetchError] = useState(null);
-    
- 
-  useEffect ( ()=>{
 
-    const getItems = async () => {  
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      
       let { data: MultimediaBase, error } = await supabase
       .from('MultimediaBase')
       .select('*')
 
-        if(error)
-        {
-            setFetchError('Sucedio un Error, intentelo más tarde');
-            setCategories(null);
-            console.log(error);
-        }
+      if (error) {
+        console.error('Error fetching data:', error.message);
+      } else {
+        console.log(MultimediaBase)
+        setData(MultimediaBase);
+      }
+    }
 
-        if(MultimediaBase)
-        {
-            setFetchError(null);
-            setCategories(MultimediaBase);
-            console.log(MultimediaBase);
-        }
-    };
-    
-    getItems();
-  },[])
+    fetchData();
+  }, []);
 
   return (
-    <div className="allpages">
-        <NavBar/>
+    <div className=" allpages bg-warning" >
+    <div style={{paddingTop:'125px'}}></div>
+      <NavBar/>
+      <div className="container bg-info">
+        <div className="row">
+            <div className = "col-md-4">
+                <AllPagesCard/>
+            </div>
+            <div className = "col-md-4">
+                <AllPagesCard/>
+            </div>
+            <div className = "col-md-4">
+                <AllPagesCard/>
+            </div>
+          </div>
+      </div>   
     </div>
-  );
+  )
 }
 
 export default All;

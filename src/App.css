@@ -464,27 +464,15 @@ span.navbar-text {
 /************ Allpages ************/
 
 .allpages {
-  padding-bottom: 125px ;
-  position: relative;
-  background-image: url('./Assets/img/fontco.png');
+  
+  justify-content: center;
+  justify-items: center;
+  background-image: url('./Assets/img/musicfond.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-.card_allpages{ 
-  height: 90%;
-  position: relative;
-  background-image: url('./Assets/img/fontCard.jpg');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
-.card_allpages:hover{ 
-  box-shadow: 10px 10px 20px 1px rgba(255, 255, 255, 0.2);
-  transition: all 0.7s linear;
-  background-size: 150% ;
-}
 
