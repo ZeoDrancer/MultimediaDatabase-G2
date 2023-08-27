@@ -21,12 +21,12 @@ function HostBanner() {
   const[value6, setValue6] = useState('---');
 
   const options = [
-      {label:"Categories", value: "Categories"},
+      {label:"Categories", value: "Categorie"},
       {label:"Musics", value: "Music"},
-      {label:"Books", value: "Books"},
-      {label:"Movies", value: "Movies"},
-      {label:"Series", value: "Series"},
-      {label:"VideoGames", value: "VideoGames"},
+      {label:"Books", value: "Book"},
+      {label:"Movies", value: "Movie"},
+      {label:"Series", value: "Serie"},
+      {label:"VideoGames", value: "VideoGame"},
   ]
 
  
@@ -38,7 +38,7 @@ function HostBanner() {
   useEffect (() => {
 
 
-    if (valueCategori === "Categories")
+    if (valueCategori === "Categorie")
     {
       setValue1("---");
       setValue2("---");
@@ -46,6 +46,7 @@ function HostBanner() {
       setValue4("---");
       setValue5("---");
       setValue6("---");
+      console.log(valueCategori);
     }
 
     if (valueCategori === "Music")
@@ -56,9 +57,10 @@ function HostBanner() {
       setValue4("Date of the publication");
       setValue5("Complementary Gener");
       setValue6("Discography");
+      console.log(valueCategori);
     }
 
-    if (valueCategori === "Books")
+    if (valueCategori === "Book")
     {
       setValue1("Books Gener");
       setValue2("Name of the Book");
@@ -66,9 +68,10 @@ function HostBanner() {
       setValue4("Year of publication");
       setValue5("Complementary Gener");
       setValue6("Editorial");
+      console.log(valueCategori);
     }
 
-    if (valueCategori === "Movies")
+    if (valueCategori === "Movie")
     {
       setValue1("Books Gener");
       setValue2("Name of the Movie");
@@ -76,9 +79,10 @@ function HostBanner() {
       setValue4("Year of premiere");
       setValue5("Complementary Gener");
       setValue6("Producer");
+      console.log(valueCategori);
     }
 
-    if (valueCategori === "Series")
+    if (valueCategori === "Serie")
     {
       setValue1("Serie Gener");
       setValue2("Name of the Serie");
@@ -86,9 +90,10 @@ function HostBanner() {
       setValue4("Year of premiere");
       setValue5("Complementary Gener");
       setValue6("Streaming plataform");
+      console.log(valueCategori);
     }
 
-    if (valueCategori === "VideoGames")
+    if (valueCategori === "VideoGame")
     {
       setValue1("VideoGame Gener");
       setValue2("Name of the VideoGame");
@@ -96,12 +101,13 @@ function HostBanner() {
       setValue4("Year of premiere");
       setValue5("Complementary Gener");
       setValue6("Producer Company");
+      console.log(valueCategori);
     }
   },[valueCategori])
 
 
   const [formData, setformData] = useState({
-    Categories:'', Gener:'', Artist_Name:'', Album_Name:'', Publication_Date:'', Second_Gener:'', Discography:'',
+    Categorie:'', Gener:'', Artist_Name:'', Album_Name:'', Publication_Date:'', Second_Gener:'', Discography:'', Imagen:'',
   });
 
   console.log(formData);
@@ -129,7 +135,8 @@ function HostBanner() {
             Album_Name: formData.Album_Name,
             Publication_Date: formData.Publication_Date, 
             Second_Gener: formData.Second_Gener,
-            Discography: formData.Discography },
+            Discography: formData.Discography,
+            Imagen: formData.Imagen},
         ])
 
         if(data){
@@ -145,7 +152,7 @@ function HostBanner() {
 
 
   return (
-    <div className = "Card " style={{ width: '500px', paddingTop: '150px', height: '110%', textAlign: 'center'}}>
+    <div className = "Card " style={{ width: '500px', paddingTop: '110px', height: '110%', textAlign: 'center'}}>
        <Form className = "card_Host rounded-4"  >
           <Form.Group className="mb-3"  style={{ width: '90%', paddingTop: '40px', paddingLeft: '40px' }}>
             <Row style={{ paddingBottom: '20px'}}>
@@ -154,7 +161,7 @@ function HostBanner() {
             <Row>
               <Col>Choose the category</Col>
               <Col style={{ paddingBottom: '10px'}}>
-                <Form.Select aria-label="Categories" type="Categories" name ="Categories" onChange={handleSelect}>
+                <Form.Select aria-label="Categories" type="Categorie" name ="Categorie" onChange={handleSelect}>
                   {options.map(option =>(
                      <option value = {option.value}>{option.label}</option>
                   ))}
@@ -203,9 +210,17 @@ function HostBanner() {
             </Row>
             <Row value= {value6}>
               <Col>{value6}</Col>
-              <Col style = {{paddingBottom:"15px"}}>
+              <Col >
                 <Form.Group className="mb-1">
                     <Form.Control onChange ={handleChange} type="Discography" name ="Discography" placeholder="         Write here" />
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col>Url Imagen</Col>
+              <Col style = {{paddingBottom:"15px"}}>
+                <Form.Group className="mb-1">
+                    <Form.Control onChange ={handleChange} type="Imagen" name ="Imagen" placeholder="         Write here" />
                 </Form.Group>
               </Col>
             </Row>

@@ -1,10 +1,10 @@
 import "../App.css";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/NavbarContainer/NavBar";
 import { Banner } from "../components/Banner";
 
 function Home() {
   return (
-    <div className="Home">
+    <div className="Home" >
       <NavBar/>
       <Banner/>
     </div>

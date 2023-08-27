@@ -6,7 +6,7 @@ import { AllPagesCard } from "../../components/AllPagesCard";
 import { Row } from "react-bootstrap";
 
 
-function All() {
+function VideoGames() {
 
   const [data, setData] = useState([]);
 
@@ -16,6 +16,7 @@ function All() {
       let { data: MultimediaBase, error } = await supabase
       .from('MultimediaBase')
       .select('*')
+      .eq('Categorie', 'VideoGame')
 
       if (error) {
         console.error('Error fetching data:', error.message);
@@ -55,4 +56,4 @@ function All() {
   )
 }
 
-export default All;
+export default VideoGames;

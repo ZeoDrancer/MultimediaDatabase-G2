@@ -1,5 +1,5 @@
 import "../App.css";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/NavbarContainer/NavBar";
 import HostBanner from "../components/HostBanner";
 
 function Host() {

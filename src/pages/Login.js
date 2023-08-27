@@ -1,5 +1,5 @@
 import "../App.css";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/NavbarContainer/NavBar";
 import { useState,useEffect } from 'react';
 import ComprovantLogin from "../components/ComprovantLogin";
 

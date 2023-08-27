@@ -6,9 +6,10 @@ import { AllPagesCard } from "../../components/AllPagesCard";
 import { Row } from "react-bootstrap";
 
 
-function All() {
+function Movies() {
 
   const [data, setData] = useState([]);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -16,11 +17,11 @@ function All() {
       let { data: MultimediaBase, error } = await supabase
       .from('MultimediaBase')
       .select('*')
+      .eq('Categorie', 'Movie')
 
       if (error) {
         console.error('Error fetching data:', error.message);
       } else {
-        console.log(MultimediaBase)
         setData(MultimediaBase);
       }
     }
@@ -28,14 +29,12 @@ function All() {
     fetchData();
   }, []);
 
-
-
   return (
     <>
       <div className="allpages" >
       <div style={{paddingTop:'125px'}}></div>
         <NavBar/>
-        <div className="container d-flex justify-content-center alin-items-center">
+        <div className="container d-flex justify-content-center alin-items-center" >
               <Row >
                   {
                     data.map((dato, id) => {
@@ -55,4 +54,4 @@ function All() {
   )
 }
 
-export default All;
+export default Movies;

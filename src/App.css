@@ -464,15 +464,55 @@ span.navbar-text {
 /************ Allpages ************/
 
 .allpages {
-  
+
+  height: 100vp;
   justify-content: center;
   justify-items: center;
   background-image: url('./Assets/img/musicfond.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  
 }
 
+.allpagesImagen {
+
+  height: 275px;
+  width: 275px;
+  
+}
+
+
+/************ ResultList ************/
+.resultList {
+  position: absolute;
+  width: 30%;
+  background-color:none;
+  top: 55px;
+  left: 70%;
+  flex-direction: column;
+  box-shadow: 0px 0px 0px white;
+  border-radius: 10px;
+  margin-top: 2rem;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+
+.resultListText_A{
+  font-size: 1.1rem;
+  font-weight: 600;
+
+}
+.resultListText_B{
+  font-size: 1rem;
+  font-weight: 550;
+
+}
+.resultListText_C{
+  font-size: 1rem;
+  font-weight: 525;
+
+}
 
 
