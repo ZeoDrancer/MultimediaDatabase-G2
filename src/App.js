@@ -13,25 +13,27 @@ import Series from './pages/Categories/Series';
 import VideoGames from './pages/Categories/VideoGames';
 
 
+
 function App() {
 
   return (
     <div className="App">
         <BrowserRouter>
-          <Routes>
-           <Route path = "" element={<Home/>}/>
-            <Route path = "/Home" element={<Home/>}/>
-            <Route path = "/List" element={<List/>}/>
-            <Route path = "/Access" element={<Access/>}/>
-            <Route path = "/Login" element={<Login />}/>
-            <Route path = "/Host" element={<Host/>}/>
-            <Route path = "/All" element={<All/>}/>
-            <Route path = "/Music" element={<Music/>}/>
-            <Route path = "/Books" element={<Books/>}/>
-            <Route path = "/Movies" element={<Movies/>}/>
-            <Route path = "/Series" element={<Series/>}/>
-            <Route path = "/VideoGames" element={<VideoGames/>}/>
-          </Routes>
+            <Routes>
+              <Route path = "" element={<Home/>}/>
+              <Route path = "/Home" element={<Home/>}/>
+              <Route path = "/List" element={<List/>}/>
+              <Route path = "/Access" element={<Access/>}/>
+              <Route path = "/Login" element={<Login />}/>
+              <Route path = "/Host" element={<Host/>}/>
+              <Route path = "/All" element={<All/>}/>
+              <Route path = "/Music" element={<Music/>}/>
+              <Route path = "/Books" element={<Books/>}/>
+              <Route path = "/Movies" element={<Movies/>}/>
+              <Route path = "/Series" element={<Series/>}/>
+              <Route path = "/VideoGames" element={<VideoGames/>}/>
+            </Routes>
+
         </BrowserRouter>
     </div>
   );

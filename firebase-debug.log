@@ -1,0 +1,47 @@
+[debug] [2023-09-03T16:16:24.788Z] ----------------------------------------------------------------------
+[debug] [2023-09-03T16:16:24.792Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zeo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-09-03T16:16:24.792Z] CLI Version:   12.5.2
+[debug] [2023-09-03T16:16:24.793Z] Platform:      win32
+[debug] [2023-09-03T16:16:24.793Z] Node Version:  v18.17.1
+[debug] [2023-09-03T16:16:24.795Z] Time:          Sun Sep 03 2023 11:16:24 GMT-0500 (hora estándar de Colombia)
+[debug] [2023-09-03T16:16:24.795Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-03T16:16:24.916Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-03T16:16:24.917Z] > authorizing via signed-in user (multimediadatabaseremind@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Zeo\Documents\TesisPage\basethree
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-09-03T16:16:37.219Z] Using project from CLI flag: multimediadatabase-remind
+[debug] [2023-09-03T16:16:37.222Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/multimediadatabase-remind [none]
+[debug] [2023-09-03T16:16:37.753Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/multimediadatabase-remind 200
+[debug] [2023-09-03T16:16:37.753Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/multimediadatabase-remind {"projectId":"multimediadatabase-remind","projectNumber":"632493315046","displayName":"MultimediaDatabase","name":"projects/multimediadatabase-remind","resources":{"hostingSite":"multimediadatabase-remind"},"state":"ACTIVE","etag":"1_83eef054-f67c-4717-bfc3-4c9a5fccc08d"}
+[info] i  Using project multimediadatabase-remind (MultimediaDatabase) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at C:\Users\Zeo\Documents\TesisPage\basethree 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=845985721&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...

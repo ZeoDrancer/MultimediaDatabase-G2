@@ -515,4 +515,10 @@ span.navbar-text {
 
 }
 
+.Text_decoration{
+  text-decoration-line: none;
+  text-decoration-color: #000;
+  color: #000;
+}
+
 

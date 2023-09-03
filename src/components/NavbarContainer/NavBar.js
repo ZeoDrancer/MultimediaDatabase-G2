@@ -9,6 +9,7 @@ import { useState,useEffect } from 'react';
 import { supabase } from '../supabase/supabase';
 import { Row } from 'react-bootstrap';
 import { NavBarComplementCard } from './NavBarComplementCard';
+import { Link } from 'react-router-dom';
 
 
 export const NavBar = ({setResuls}) =>{
@@ -65,22 +66,22 @@ export const NavBar = ({setResuls}) =>{
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="me-auto my-2 my-lg-0"
+                className=" Text_decoration me-auto my-2 my-lg-0"
                 style={{ maxHeight: '100px', paddingInline: '25px', fontSize:'18px'}}
-                navbarScroll
-              >
-                <Nav.Link href="/Home" > Home </Nav.Link>
-                <Nav.Link href="/List" style={{paddingInline: '25px', fontSize:'18px'}} > List </Nav.Link>
+                navbarScroll>
+
+                <Nav.Link ><Link className='Text_decoration' to='/Home'> Home </Link></Nav.Link>
+                <Nav.Link  style={{paddingInline: '25px', fontSize:'18px'}} > <Link className='Text_decoration' to='/List'> List </Link></Nav.Link>
                 <NavDropdown title="Library" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="/Music">Musics</NavDropdown.Item>
-                  <NavDropdown.Item href="/Books">Books</NavDropdown.Item>
-                  <NavDropdown.Item href="/Movies">Movies</NavDropdown.Item>
-                  <NavDropdown.Item href="/Series">Series</NavDropdown.Item>
-                  <NavDropdown.Item href="/VideoGames">VideoGames</NavDropdown.Item>
+                  <NavDropdown.Item ><Link className='Text_decoration'  to='/Music'> Musics </Link></NavDropdown.Item>
+                  <NavDropdown.Item ><Link className='Text_decoration'  to='/Books'> Books</Link></NavDropdown.Item>
+                  <NavDropdown.Item ><Link className='Text_decoration'  to='/Movies'> Movies </Link></NavDropdown.Item>
+                  <NavDropdown.Item ><Link className='Text_decoration'  to='/Series'> Series</Link></NavDropdown.Item>
+                  <NavDropdown.Item ><Link className='Text_decoration'  to='/VideoGames'> VideoGames </Link></NavDropdown.Item>
                   <NavDropdown.Divider/>
-                  <NavDropdown.Item href="/All">All</NavDropdown.Item>
+                  <NavDropdown.Item ><Link className='Text_decoration'  to='/All'> All </Link></NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/Access">Access</Nav.Link>
+                <Nav.Link ><Link className='Text_decoration'  to='/Access'> Access</Link></Nav.Link>
               </Nav>
               
               <Form className="d-flex">
